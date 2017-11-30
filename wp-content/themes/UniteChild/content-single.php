@@ -68,6 +68,7 @@
 			echo "Ticket Price ". get_field("ticket_price")."<br/> ";
 			//printf($meta_text,$category_list,$tag_list,get_permalink());
 
+		if(!function_exists("getTaxonomyNames")) {
 			function getTaxonomyNames($taxonomyArr){
 				$taxonomyNames = array();
 				foreach($taxonomyArr as $taxonomyObj) {
@@ -75,6 +76,7 @@
 				}
 				return $taxonomyNames;
 			}
+		}
 		?>
 
 		<?php edit_post_link( __( 'Edit', 'unite' ), '<i class="fa fa-pencil-square-o"></i><span class="edit-link">', '</span>' ); ?>
